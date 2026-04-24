@@ -508,6 +508,9 @@
     setTimeout(()=>t.remove(),3000);
   }
 
+  document.getElementById('sidebar-name').textContent = user.name || '';
+  document.getElementById('sidebar-avatar').textContent = (user.name||'').split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+
   renderAll();
   </script>
 </body>
