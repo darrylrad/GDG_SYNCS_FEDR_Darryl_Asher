@@ -167,8 +167,7 @@
 
   document.addEventListener('keydown', e => { if(e.key==='Enter') handleSubmit(); });
 
-  const u = JSON.parse(localStorage.getItem('tf_user')||'null');
-  if (u) window.location.href = u.role==='teacher' ? 'teacher-dashboard.html' : 'student-dashboard.html';
+  localStorage.removeItem('tf_user');
 </script>
 </body>
 </html>
